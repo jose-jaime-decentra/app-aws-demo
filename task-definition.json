@@ -1,0 +1,59 @@
+{
+    "taskDefinitionArn": "arn:aws:ecs:us-east-2:764931113741:task-definition/continuos:1",
+    "containerDefinitions": [
+        {
+            "name": "continuos",
+            "image": "764931113741.dkr.ecr.us-east-2.amazonaws.com/continuos",
+            "cpu": 0,
+            "portMappings": [
+                {
+                    "name": "continuos-3003-tcp",
+                    "containerPort": 3003,
+                    "hostPort": 3003,
+                    "protocol": "tcp",
+                    "appProtocol": "http"
+                }
+            ],
+            "essential": true,
+            "environment": [],
+            "environmentFiles": [],
+            "mountPoints": [],
+            "volumesFrom": []
+        }
+    ],
+    "family": "continuos",
+    "executionRoleArn": "arn:aws:iam::764931113741:role/ecsTaskExecutionRole",
+    "networkMode": "bridge",
+    "revision": 1,
+    "volumes": [],
+    "status": "ACTIVE",
+    "requiresAttributes": [
+        {
+            "name": "com.amazonaws.ecs.capability.ecr-auth"
+        },
+        {
+            "name": "ecs.capability.execution-role-ecr-pull"
+        }
+    ],
+    "placementConstraints": [],
+    "compatibilities": [
+        "EC2"
+    ],
+    "requiresCompatibilities": [
+        "EC2"
+    ],
+    "cpu": "1024",
+    "memory": "1024",
+    "runtimePlatform": {
+        "cpuArchitecture": "X86_64",
+        "operatingSystemFamily": "LINUX"
+    },
+    "registeredAt": "2023-01-28T06:28:26.996Z",
+    "registeredBy": "arn:aws:iam::764931113741:root",
+    "tags": [
+        {
+            "key": "ecs:taskDefinition:createdFrom",
+            "value": "ecs-console-v2"
+        }
+    ]
+}
